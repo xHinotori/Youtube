@@ -1,0 +1,210 @@
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css?family=Roboto);
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+html *{
+  font-family: Roboto, sans-serif;
+  font-size:14px;
+}
+button {
+  user-select: none;
+  cursor: pointer;
+}
+.videos img {
+  width: 170px;
+  height: 100px;
+  float: left;
+  margin: 0 8px 5px 0;
+
+}
+.clearFix{
+  overflow: hidden;
+}
+.videoName{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 16px;
+  max-height: 32px;
+}
+.videos{
+  margin: 10px 0 10px 0;
+}
+#recommendedVideos{
+  float: left;
+  width: 420px;
+}
+#video{
+  margin: 0 25px 0 25px;
+  float: left;
+}
+h1{
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+}
+#vidViews{
+  position: absolute;
+}
+#buttonContainer{
+  float:right;
+  position: relative;
+  height: 40px;
+}
+#buttonContainer svg{
+  width: 20px;
+  height: 20px;
+  fill: #909090;
+  position: relative;
+  top: 6px;
+  border-radius: 50%;
+  padding: 5px;
+}
+#buttonContainer button{
+  border: none;
+  background-color: transparent;
+  color: #909090;
+  font-size: 13px;
+  height: 100%;
+}
+#channel img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+#subBtnContainer{
+  float:right;
+}
+#subBtnContainer button{
+  padding: 10px 15px 10px 15px;
+  border: none;
+  color: white;
+  background-color: red;
+  font-size: 14px;
+}
+#subBtnContainer span{
+  margin-right: 5px;
+  font-weight: bold;
+}
+#description{
+  margin-left: 70px;
+  line-height: 150%;
+}
+#description span{
+  color: grey;
+  font-size:15px;
+  line-height: 250%;
+  user-select: none;
+}
+hr {
+  color: grey;
+  opacity: 0.3;
+}
+.accountPic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#videoComments{
+  margin: 10px 10px 10px 0;
+}
+#commentCount{
+  font-size: 16px;
+  margin-right: 20px;
+}
+#videoComments button{
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: 5px;
+}
+#videoComments button svg{
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+}
+#videoComments button span{
+  position: relative;
+  top: -8px;
+  opacity: 0.6;
+  font-weight: bold;
+  font-size: 14px;
+}
+#addComment{
+  margin: 30px 0 20px 0;
+}
+#videoComments img{
+  float: left;
+  margin-right: 20px;
+}
+.commentContent {
+  float: left;
+}
+#addComment input{
+  float: inherit;
+  box-sizing: border-box;
+  width:1000px;
+  max-width: 100%;
+  padding: 3px;
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  transition: border-bottom .5s ease-in-out;
+}
+#addComment input:focus{
+  outline: none;
+  border-bottom: 2px solid grey;
+}
+.comment {
+  display: block;
+  margin-top: 25px;
+}
+.showMore{
+  display: table;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 5px 5px 0;
+  margin-top: 2px;
+  user-select: none;
+  cursor: pointer;
+}
+.showMore svg{
+  width: 16px;
+  height: 16px;
+}
+.time {
+  opacity: 0.6;
+  font-size: 13px;
+}
+.accName {
+  font-weight: bold;
+  font-size: 13px;
+}
+#videoComments p{
+  margin-top: 10px;
+}
+.comBtnContainer{
+  margin: 5px 0 5px 0;
+  display: flex;
+  align-items: center;
+}
+#commentSection button svg{
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-radius:50%;
+  padding: 4px;
+}
+#commentSection button{
+  outline: none;
+  top: 0;
+}
+#commentSection svg:active{
+  background-color: blue;
+}
