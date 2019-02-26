@@ -1,3 +1,5 @@
+/* html changes */
+
 @font-face {
   font-family: Roboto;
   src: url(https://fonts.googleapis.com/css?family=Roboto);
@@ -5,6 +7,7 @@
 html {
   height: 100%;
   width: 100%;
+  z-index: 5;
 }
 html *{
   font-family: Roboto, sans-serif;
@@ -14,42 +17,112 @@ button {
   user-select: none;
   cursor: pointer;
 }
-.videos img {
-  width: 170px;
-  height: 100px;
-  float: left;
-  margin: 0 8px 5px 0;
-
+section{
+  margin-top: 25px;
+}
+h1{
+  font-size: 18px;
+  margin: 20px 0 10px 0;
+}
+hr {
+  color: grey;
+  opacity: 0.3;
 }
 .clearFix{
   overflow: hidden;
 }
-.videoName{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-height: 16px;
-  max-height: 32px;
+
+/* navigation/header */
+
+.nav{
+  margin: 15px 10px 0px 10px;
 }
-.videos{
-  margin: 10px 0 10px 0;
+nav {
+position: -webkit-sticky;
+position: sticky;
+display: flex;
+top: 0;
+background-color: white;
+height: 60px;
+z-index: 10;
 }
-#recommendedVideos{
+#navigation svg{
+  height: 24px;
+  width: 24px;
+}
+#navigation {
+  opacity: 0.5;
+}
+#searchBar{
+  background-color: white;
+  display: table;
+  border: 1px solid RGB(128,128,128,0.5);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+#searchInput{
   float: left;
-  width: 420px;
 }
+#searchInput input{
+  border-color: transparent;
+  outline: none;
+  line-height: 24px;
+  width: 500px;
+}
+#searchInput img {
+  margin: 0 5px 0 5px;
+}
+#searchBar form button{
+  width: 60px;
+  background-color: transparent;
+  border-color: transparent;
+  border-left: 1px solid RGB(128,128,128,0.5);
+}
+#searchBar form button svg{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+  opacity: 0.5;
+}
+#googleApps{
+  position: absolute;
+  right: 0;
+}
+.addOns svg{
+  width: 24px;
+  height: 24px;
+}
+.addOns{
+  float: left;
+  border-radius: 60%;
+  padding: 6px;
+  opacity: 0.6;
+  margin: 7px;
+}
+#googlePlus img{
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+#googlePlus{
+  float: left;
+  border-radius: 50%;
+  margin: 9px;
+}
+
+/* video and description */
+
 #video{
   margin: 0 25px 0 25px;
   float: left;
 }
-h1{
-  font-size: 20px;
-  margin: 20px 0 10px 0;
-}
+
+
 #vidViews{
-  position: absolute;
+  font-size: 17px;
+  opacity: 0.7;
 }
 #buttonContainer{
   float:right;
@@ -88,10 +161,12 @@ h1{
   color: white;
   background-color: red;
   font-size: 14px;
+  position: relative;
+  top: -30px;
 }
 #subBtnContainer span{
   margin-right: 5px;
-  font-weight: bold;
+  font-weight: 500;
 }
 #description{
   margin-left: 70px;
@@ -103,10 +178,13 @@ h1{
   line-height: 250%;
   user-select: none;
 }
-hr {
-  color: grey;
-  opacity: 0.3;
+.channelName{
+  font-weight: 500;
+  margin: 10px 0 10px 0;
 }
+
+/* comment section */
+
 .accountPic {
   width: 40px;
   height: 40px;
@@ -128,13 +206,13 @@ hr {
 #videoComments button svg{
   width: 25px;
   height: 25px;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 #videoComments button span{
   position: relative;
   top: -8px;
   opacity: 0.6;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
 }
 #addComment{
@@ -167,7 +245,7 @@ hr {
 }
 .showMore{
   display: table;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
   padding: 5px 5px 5px 0;
   margin-top: 2px;
@@ -183,7 +261,7 @@ hr {
   font-size: 13px;
 }
 .accName {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 13px;
 }
 #videoComments p{
@@ -193,13 +271,15 @@ hr {
   margin: 5px 0 5px 0;
   display: flex;
   align-items: center;
+  font-size: 12px;
 }
 #commentSection button svg{
   width: 16px;
   height: 16px;
-  background-color: transparent;
+  background-color: none;
   border-radius:50%;
   padding: 4px;
+  opacity: 0.5;
 }
 #commentSection button{
   outline: none;
@@ -207,4 +287,90 @@ hr {
 }
 #commentSection svg:active{
   background-color: blue;
+}
+.relpyBtn{
+  font-size: 13px;
+  opacity: 0.6;
+  font-weight: 550;
+}
+
+/* recommended videos*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 13px;
+  float: right;
+  margin: 0 3px 3px 10px;
+}
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: -2px;
+  bottom: -3px;
+  background-color: #999;
+  transition: .2s;
+}
+input:checked + .slider:before {
+  background-color: #06d;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+#recVidHeader{
+  margin: 20px 0 20px 0;
+}
+#recommendedVideos{
+  width: 420px;
+}
+.videos img {
+  width: 170px;
+  height: 100px;
+  float: left;
+  margin: 0 8px 5px 0;
+
+}
+.videoName{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 16px;
+  max-height: 32px;
+}
+.videos{
+  margin-top: 5px;
+}
+.videoName {
+  font-weight: 500;
+}
+.author,
+.views {
+  color: rgb(58,58,58);
+  opacity: 0.8;
 }
