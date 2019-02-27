@@ -373,4 +373,14 @@ input:checked + .slider:before {
 .views {
   color: rgb(58,58,58);
   opacity: 0.8;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+#recommendedVideos a{
+  text-decoration: none;
+  color: black;
+}
+#recommendedVideos a:visited{
+  color: black;
 }
