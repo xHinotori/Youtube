@@ -19,6 +19,10 @@ button {
 }
 section{
   margin-top: 25px;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 h1{
   font-size: 18px;
@@ -27,6 +31,10 @@ h1{
 hr {
   color: grey;
   opacity: 0.3;
+}
+iframe{
+  width: 1280px;
+  height: 720px;
 }
 .clearFix{
   overflow: hidden;
@@ -43,7 +51,7 @@ position: sticky;
 display: flex;
 top: 0;
 background-color: white;
-height: 60px;
+height: 55px;
 z-index: 10;
 }
 #navigation svg{
@@ -89,6 +97,7 @@ z-index: 10;
 #googleApps{
   position: absolute;
   right: 0;
+  top: -10px;
 }
 .addOns svg{
   width: 24px;
@@ -123,11 +132,18 @@ z-index: 10;
 #vidViews{
   font-size: 17px;
   opacity: 0.7;
+  float:left;
+  position: relative;
+  top: 10px;
+}
+#info{
+  display: block;
 }
 #buttonContainer{
-  float:right;
-  position: relative;
+  float: right;
   height: 40px;
+  position: relative;
+  top: -10px;
 }
 #buttonContainer svg{
   width: 20px;
@@ -342,7 +358,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 #recVidHeader{
-  margin: 20px 0 20px 0;
+  margin: 5px 0 20px 0;
 }
 #recommendedVideos{
   width: 420px;
